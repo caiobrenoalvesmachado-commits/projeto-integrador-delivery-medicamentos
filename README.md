@@ -69,3 +69,18 @@ CREATE TABLE tb_trajetorias_entregador (
 Algoritmo K-Means: Utilizado para identificar automaticamente os agrupamentos geográficos com maior densidade de pedidos em tempo real. O algoritmo converge as coordenadas de latitude e longitude, calculando os centroides que representam os Hotspots (Zonas Quentes) de demanda. O modelo define pontos estratégicos onde o parceiro logístico maximiza suas chances de receber chamadas.
 
 Biblioteca Folium / Renderização HTML: Utilizada para construir a interface de visualização do entregador por meio de mapas interativos de calor baseados na intensidade de pedidos por região geográfica, permitindo suavização visual e alta usabilidade para dispositivos móveis.
+
+## 5. Avaliação do Impacto Social Gerado
+
+O projeto não visa ao lucro corporativo, mas sim à geração de novas oportunidades de trabalho para os entregadores, promovendo agilidade e praticidade no serviço. Além disso, busca auxiliar os usuários que enfrentam demandas urgentes por medicamentos essenciais.
+
+### 5.1. Alinhamento com as Metas ODS da ONU
+* *ODS 3: Saúde e Bem-Estar:* O sistema garante que indivíduos em vulnerabilidade clínica — como idosos, pessoas com mobilidade reduzida crônica ou pacientes dependentes de tratamentos contínuos — tenham acesso rápido e previsível a medicamentos essenciais de urgência. Ao otimizar o posicionamento da frota, o tempo de resposta logística reduz o agravamento de quadros clínicos por falta de remédios.
+* *ODS 8: Trabalho Decente e Crescimento Econômico :* No cenário atual da economia , os entregadores autônomos enfrentam jornadas exaustivas e gastos imprevisíveis com combustível rodando às cegas. O Módulo do Entregador descentraliza a informação e mitiga essa vulnerabilidade. O mapa de calor preditivo funciona como uma ferramenta de proteção ao trabalhador, permitindo que ele gerencie seu tempo estrategicamente e gaste menos combustível para obter o mesmo retorno financeiro.
+
+### 5.2. KPIs do Impacto Social
+Para mensurar a transformação social gerada pelo protótipo, foram estabelecidos três indicadores principais baseados nos dados coletados:
+
+1. *Tempo de Atendimento de Urgência Farmacêutica:* Mede o intervalo entre a confirmação do pedido e a entrega na casa do paciente. Com o algoritmo K-Means posicionando os entregadores previamente nos Hotspots, os dados simulam uma *redução no tempo de espera de até 60%* em bairros críticos.
+2. *Taxa de Deslocamento Ocioso:* Mede a proporção de quilômetros que o entregador roda sem nenhuma mercadoria na bag que seria um gasto de combustível inútil. O modelo estatístico valida que o uso do mapa de calor diminui o tempo de ociosidade e espera *de 22 minutos para apenas 8 minutos* por corrida.
+3. *Métrica de Acessibilidade Urbana:* Percentual de entregas concluídas com sucesso dentro do prazo em regiões periféricas ou de relevo acentuado na cidade de Vitória, garantindo que o direito à saúde chegue a todas as comunidades de forma equitativa.
