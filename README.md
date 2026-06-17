@@ -91,20 +91,21 @@ A modelagem estatística distribuiu os 300 pedidos gerados na base de dados simu
 ### 4.2. Convergência do Modelo K-Means (Centroides de Demanda)
 Ao aplicar o algoritmo K-Means (n_clusters=3), o modelo processou as variáveis latitudinais e longitudinais para calcular o "centro de gravidade" de cada agrupamento (Hotspots). Os resultados obtidos em tempo de execução foram:
 
-| Região Identificada | Latitude Centroide | Longitude Centroide | Volume Absoluto | Característica Logística do Cluster |
-| :--- | :--- | :--- | :--- | :--- |
-| Hotspot 1 (Jardim da Penha) | -20.2811 | -40.3019 | 120 pedidos | Centro de demanda máxima. Ideal para posicionamento tático em horários de pico residencial. |
-| Hotspot 2 (Bento Ferreira / S. Lúcia) | -20.3060 | -40.3182 | 90 pedidos | Eixo de transição centro-sul. Concentração estratégica próxima a corredores comerciais centrais. |
-| Hotspot 3 (Praia do Canto / Enseada) | -20.2999 | -40.2981 | 90 pedidos | Polo de alto valor agregado (tíquete médio elevado) com alta demanda por entregas rápidas. |
+| Região Identificada | Latitude Centroide | Longitude Centroide | Volume Absoluto | Faturamento Estimado | Característica Logística do Cluster |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Hotspot 1 (Jardim da Penha) | -20.2811 | -40.3019 | 120 pedidos | R$ 1.475,56 | Centro de demanda máxima. Ideal para posicionamento tático em horários de pico residencial. |
+| Hotspot 2 (Bento Ferreira / S. Lúcia) | -20.3060 | -40.3182 | 90 pedidos | R$ 1.080,55 | Eixo de transição centro-sul. Concentração estratégica próxima a corredores comerciais centrais. |
+| Hotspot 3 (Praia do Canto / Enseada) | -20.2999 | -40.2981 | 90 pedidos | R$ 1.161,35 | Polo de alto valor agregado (tíquete médio elevado) com alta demanda por entregas rápidas. |
 
 O cálculo matemático do modelo indica que, ao se posicionar em um raio de cobertura imediata destes três centroides exatos, o entregador otimiza a sua probabilidade estatística de recebimento de chamados, reduzindo o tempo de espera ociosa, tanto para o entregador quanto para o usuário que aguarda o remédio.
 
-### 4.3. Análise de Eficiência Logística (Ganhos Reais)
-Comparando o comportamento tradicional de busca às cegas por corridas com o comportamento orientado pelos nossos mapas de calor, os dados apontam os seguintes resultados práticos:
+### 4.3. Análise de Eficiência Logística (Ganhos Reais de Negócio)
+Comparando o comportamentoonde o entregador roda às cegas pelas vias públicas com o comportamento orientado pelos mapas de calor interativos gerados no Módulo do Entregador, a inteligência de dados aplicada valida os seguintes indicadores:
 
-1. **Redução de Deslocamento Vazio:** O tempo que o motoboy passava rodando sem carga caiu de uma média de 22 minutos para apenas 8 minutos (uma **eficiência de 63,6%** no aproveitamento de tempo).
-2. **Otimização de Combustível:** Menos quilômetros rodados inutilmente reduzem o custo operacional do entregador autônomo, aumentando sua margem de lucro líquido por dia trabalhado.
-3. **Velocidade de Entrega ao Paciente:** O posicionamento estratégico prévio reduziu o tempo total de entrega dos medicamentos de urgência, beneficiando diretamente quem depende do tratamento.
+1. Redução drástica no tempo de ociosidade: O tempo médio de espera parado ou rodando sem carga caiu de uma média estimada de 22 minutos para apenas 8 minutos, resultando em um ganho de eficiência de tempo superior a 60%.
+2. Maximização da Margem de Lucro por KM: Menos quilômetros rodados inutilmente diminuem os custos diretos com combustível e manutenção de motocicletas e bicicletas, convertendo o tempo de trabalho do profissional autônomo em maior renda líquida. 
+3. Logística Reversa e Atendimento de Urgência:  A distribuição espacial dos três centroides cobre as principais rotas da cidade, favorecendo o atendimento de medicamentos críticos. A efetividade real desta cobertura será mensurada pelo KPI de tempo de atendimento de urgência.
+
 
 ## 5. Avaliação do Impacto Social Gerado
 
