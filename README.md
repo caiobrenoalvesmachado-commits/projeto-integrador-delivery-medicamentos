@@ -75,6 +75,8 @@ Algoritmo K-Means: Utilizado para identificar automaticamente os agrupamentos ge
 
 Biblioteca Folium / Renderização HTML: Utilizada para construir a interface de visualização do entregador por meio de mapas interativos de calor baseados na intensidade de pedidos por região geográfica, permitindo suavização visual e alta usabilidade para dispositivos móveis.
 
+A escolha de n_clusters=3 não foi arbitrária: foi validada estatisticamente por meio do Elbow Method (análise da inércia para diferentes valores de k) e do Silhouette Score, que obteve sua maior pontuação exatamente em k=3 (0,85), confirmando que essa segmentação produz clusters bem separados e coesos — alinhados também com a divisão geográfica natural das três zonas-alvo do estudo.
+
 ## 4. Análise de Dados e Resultados Obtidos
 
 A análise foi executada com base no histórico de geolocalização de pedidos simulados na região metropolitana de Vitória-ES. Para garantir a fidelidade urbana do ecossistema, as coordenadas foram geradas de forma restrita às zonas residenciais e comerciais de alta densidade, mitigando ruídos geográficos como áreas ambientais ou no mar.
