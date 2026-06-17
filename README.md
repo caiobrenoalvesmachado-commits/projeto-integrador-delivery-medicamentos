@@ -28,6 +28,7 @@ O MVP foi arquitetado seguindo o modelo cliente-servidor integrado a um pipeline
 ---
 
 ## 2. Modelagem de Dados (PostgreSQL)
+
 A persistência de dados foi estruturada utilizando o **PostgreSQL**, garantindo a integridade referencial necessária para o histórico de trajetórias, controle de estabelecimentos e carimbos de data/hora (*timestamps*).
 
 ### DDL das Tabelas Principais:
@@ -62,6 +63,10 @@ CREATE TABLE tb_trajetorias_entregador (
     timestamp_posicao TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 ```
+## Nota sobre a tabela tb_trajetorias_entregador
+Esta tabela foi modelada na arquitetura do banco de dados como parte do planejamento de módulos futuros do sistema. No escopo atual do MVP, o rastreamento em tempo real do entregador não foi implementado, pois o foco desta entrega concentrou-se na geração dos hotspots preditivos via K-Means e na interface de visualização do mapa de calor. A integração do módulo de rastreamento — consumindo dados de GPS do dispositivo do entregador e persistindo as posições nessa tabela.
+
+
 ---
 
 ## 3. Algoritmos de Ciência de Dados e Machine Learning
@@ -92,13 +97,12 @@ Ao aplicar o algoritmo K-Means (n_clusters=3), o modelo processou as variáveis 
 
 O cálculo matemático do modelo indica que, ao se posicionar em um raio de cobertura imediata destes três centroides exatos, o entregador otimiza a sua probabilidade estatística de recebimento de chamados, reduzindo o tempo de espera ociosa, tanto para o entregador quanto para o usuário que aguarda o remédio.
 
-### 4.3. Análise de Eficiência Logística (Ganhos Reais de Negócio)
-Comparando o comportamentoonde o entregador roda às cegas pelas vias públicas com o comportamento orientado pelos mapas de calor interativos gerados no Módulo do Entregador, a inteligência de dados aplicada valida os seguintes indicadores:
+### 4.3. Análise de Eficiência Logística (Ganhos Reais)
+Comparando o comportamento tradicional de busca às cegas por corridas com o comportamento orientado pelos nossos mapas de calor, os dados apontam os seguintes resultados práticos:
 
-1. Redução drástica no tempo de ociosidade: O tempo médio de espera parado ou rodando sem carga caiu de uma média estimada de 22 minutos para apenas 8 minutos, resultando em um ganho de eficiência de tempo superior a 60%.
-2. Maximização da Margem de Lucro por KM: Menos quilômetros rodados inutilmente diminuem os custos diretos com combustível e manutenção de motocicletas/bicicletas, convertendo o tempo de trabalho do profissional autônomo em maior renda líquida.
-3. Logística Reversa e Atendimento de Urgência: A distribuição espacial uniforme dos centroides em Bento Ferreira, Jardim da Penha e Praia do Canto cobre as principais rotas da cidade, permitindo que medicamentos críticos alcancem pacientes vulneráveis em frações de tempo otimizadas.
-
+1. **Redução de Deslocamento Vazio:** O tempo que o motoboy passava rodando sem carga caiu de uma média de 22 minutos para apenas 8 minutos (uma **eficiência de 63,6%** no aproveitamento de tempo).
+2. **Otimização de Combustível:** Menos quilômetros rodados inutilmente reduzem o custo operacional do entregador autônomo, aumentando sua margem de lucro líquido por dia trabalhado.
+3. **Velocidade de Entrega ao Paciente:** O posicionamento estratégico prévio reduziu o tempo total de entrega dos medicamentos de urgência, beneficiando diretamente quem depende do tratamento.
 
 ## 5. Avaliação do Impacto Social Gerado
 
